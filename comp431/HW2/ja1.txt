@@ -1,0 +1,19 @@
+MAIL FROM: <jeffay@cs.unc.edu>
+RCPT TO: <aikat@cs.unc.edu>
+RCPT TO: <ja1@unc.edu>
+RCPT TO: <ja2@unc.edu>
+RCPT TO: <ja3@unc.edu>
+RCPT TO: <ja4@unc.edu>
+DATA
+Test 4 - This message has five receivers.
+So, there should be five files in the forward directory
+with this same message.
+.
+MAIL FROM: <jeffay@cs.unc.edu>
+RCPT TO: <aikat@cs.unc.edu>
+DATA
+Test 5 - This message data tests if the program looks correctly
+for <CRLF>.<CRLF> as the end of message.
+Notice this next line has a '.' but it is preceded by spaces.
+.
+.

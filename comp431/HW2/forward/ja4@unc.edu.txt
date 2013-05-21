@@ -1,0 +1,18 @@
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+To: ja1@unc.edu
+To: ja2@unc.edu
+To: ja3@unc.edu
+To: ja4@unc.edu
+Test 4 - This message has five receivers.
+So, there should be five files in the forward directory
+with this same message.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+To: ja1@unc.edu
+To: ja2@unc.edu
+To: ja3@unc.edu
+To: ja4@unc.edu
+Test 4 - This message has five receivers.
+So, there should be five files in the forward directory
+with this same message.

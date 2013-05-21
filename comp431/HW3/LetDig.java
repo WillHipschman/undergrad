@@ -1,0 +1,43 @@
+/*
+ * Author: William Hipschman
+ */
+
+
+
+
+/*
+ * This class parses LetDig commands
+ */
+public class LetDig extends CharToken{
+
+	public static final String ERROR = "let-dig";
+
+	private CharToken charToken;
+
+	/*
+	 * The constructor only terminates and instantiates if the
+	 * string parameter is a valid LetDig token
+	 */
+	public LetDig(char c) throws InvalidSMTPException{
+
+		//the character can either be alphabetic or numeric
+		try{
+
+			charToken = new A(c);
+
+		}catch(InvalidSMTPException e){
+
+			charToken = new D(c);
+		}
+		finally{
+
+			//this section is not reached if an exception is thrown in the catch block
+			//token is a member of the super class
+			token = c;
+		}
+	}
+	public CharToken getSubToken(){
+		
+		return charToken;
+	}
+}

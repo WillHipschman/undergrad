@@ -1,0 +1,14 @@
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+To: ja@unc.edu
+Test 2 - This message has two receivers.
+So, there should be two files in the forward directory
+with this same message. And this should be appended to end of the file
+aikat@cs.unc.edu created for test 1.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+To: ja@unc.edu
+Test 2 - This message has two receivers.
+So, there should be two files in the forward directory
+with this same message. And this should be appended to end of the file
+aikat@cs.unc.edu created for test 1.

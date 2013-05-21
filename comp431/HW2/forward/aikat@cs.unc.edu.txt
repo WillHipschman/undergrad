@@ -1,0 +1,168 @@
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+Test 1 - This is just a normal and correct message.
+This should work fine, with a '250 OK' after the MAIL FROM
+and RCPT TO commands, a "354 Blah' after the DATA command,
+a '250 OK' after the end of data at which point, the message is
+written to file ./forward/aikat@cs.unc.edu
+Test #1 is 10 points - 4 for the 4 server responses, 6 for write to file
+Tests #2 to #5 carry 6 points each.
+Tests #6 to #14 carry 3 points each.
+Tests #15 to #17 carry 4 points each.
+EOF (end-of-file) handling is 2 points
+On some tests, where a command was ill-formed you could have waited for the
+correct well-formed expected next command, or decided to throw out that
+message altogether. Either is correct.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+To: ja@unc.edu
+Test 2 - This message has two receivers.
+So, there should be two files in the forward directory
+with this same message. And this should be appended to end of the file
+aikat@cs.unc.edu created for test 1.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+To: aikat@cs.unc.edu
+Test 3 - This message has two receivers, and they are the same!
+There should be two copies of this message in the file
+aikat@cs.unc.edu
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+To: aikat@cs.unc.edu
+Test 3 - This message has two receivers, and they are the same!
+There should be two copies of this message in the file
+aikat@cs.unc.edu
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+To: ja1@unc.edu
+To: ja2@unc.edu
+To: ja3@unc.edu
+To: ja4@unc.edu
+Test 4 - This message has five receivers.
+So, there should be five files in the forward directory
+with this same message.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+Test 5 - This message data tests if the program looks correctly
+for <CRLF>.<CRLF> as the end of message.
+Notice this next line has a '.' but it is preceded by spaces.
+ .
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+Test 6 - This message had an ill-formed MAIL FROM command
+where the first parsed token is incorrect.
+It was subsequently corrected. The original line should have
+generated a 500 error.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+Test 7 - This message had an ill-formed RCPT TO command
+where the first parsed token is incorrect.
+It was subsequently corrected. The original line should have
+generated a 500 error.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+Test 8 - This message had an ill-formed DATA command
+where the first parsed token is incorrect.
+It was subsequently corrected. The original line should have
+generated a 500 error.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+Test 9 - This message had an ill-formed MAIL FROM command
+where there is a syntax error in the parameters of the MAIL FROM: command
+It was subsequently corrected. The original line should have
+generated a 501 error.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+Test 10 - This message had an ill-formed RCPT TO command
+where there is a syntax error in the parameters of the RCPT TO: command
+It was subsequently corrected. The original line should have
+generated a 501 error.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+Test 11 - This message had an ill-formed DATA command
+where there is a syntax error in the parameters of the DATA command
+It was subsequently corrected. The original line should have
+generated a 501 error.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+Test 12 - This message had a bad sequence of commands - started with RCPT TO:
+Program should generate a 503 error.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+Test 13 - This message had a bad sequence of commands - started with DATA
+Program should generate a 503 error.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+Test 14 - This message had a bad sequence of commands - DATA before RCPT TO
+Program should generate a 503 error.MAIL FROM: <jeffay@cs.unc.edu>
+RCPT TO: <aikat@cs.unc.edu>
+DATA
+Test 1 - This is just a normal and correct message.
+This should work fine, with a '250 OK' after the MAIL FROM
+and RCPT TO commands, a "354 Blah' after the DATA command,
+a '250 OK' after the end of data at which point, the message is
+written to file ./forward/aikat@cs.unc.edu
+Test #1 is 10 points - 4 for the 4 server responses, 6 for write to file
+Tests #2 to #5 carry 6 points each.
+Tests #6 to #14 carry 3 points each.
+Tests #15 to #17 carry 4 points each.
+EOF (end-of-file) handling is 2 points
+On some tests, where a command was ill-formed you could have waited for the
+correct well-formed expected next command, or decided to throw out that
+message altogether. Either is correct.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+To: ja@unc.edu
+Test 2 - This message has two receivers.
+So, there should be two files in the forward directory
+with this same message. And this should be appended to end of the file
+aikat@cs.unc.edu created for test 1.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+To: aikat@cs.unc.edu
+Test 3 - This message has two receivers, and they are the same!
+There should be two copies of this message in the file
+aikat@cs.unc.edu
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+To: aikat@cs.unc.edu
+Test 3 - This message has two receivers, and they are the same!
+There should be two copies of this message in the file
+aikat@cs.unc.edu
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+To: ja1@unc.edu
+To: ja2@unc.edu
+To: ja3@unc.edu
+To: ja4@unc.edu
+Test 4 - This message has five receivers.
+So, there should be five files in the forward directory
+with this same message.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+Test 5 - This message data tests if the program looks correctly
+for <CRLF>.<CRLF> as the end of message.
+Notice this next line has a '.' but it is preceded by spaces.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+Test 6 - This message had an ill-formed MAIL FROM command
+where the first parsed token is incorrect.
+It was subsequently corrected. The original line should have
+generated a 500 error.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+Test 7 - This message had an ill-formed RCPT TO command
+where the first parsed token is incorrect.
+It was subsequently corrected. The original line should have
+generated a 500 error.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+RCPT TO: <aikat@cs.unc.edu>
+Test 15 - This message does not have a bad sequence of commands
+- the RCPT TO: command after the well-formed DATA command should be treated
+as part of the message body.
+From: jeffay@cs.unc.edu
+To: aikat@cs.unc.edu
+Test 16 - This message has two senders which is not valid.
+Once you see a valid MAIL FROM: command, you should wait for a valid RCPT TO:
+command.
